@@ -51,7 +51,7 @@ Total_Steps <- activityDT[, c(lapply(.SD, sum)), .SDcols = c("steps"), by = .(da
 # mean and median total number of steps taken per day
 Total_Steps[, .(Mean_Steps = mean(steps), Median_Steps = median(steps))]
 
-ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
+ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "green", binwidth = 1000) + labs(title = "Total Steps", x = "Steps", y = "Frequency")
 
 ##---difference_in_activity_patterns------------------------
 # Just recreating activityDT from scratch then making the new factor variable. (No need to, just want to be clear on what the entire process is.) 
